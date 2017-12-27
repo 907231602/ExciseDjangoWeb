@@ -6,7 +6,7 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return render(request, 'home.html')
+    return render(request, 'learn.html')
 
 def add(request):
     a=request.GET['a']

@@ -15,15 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from myApp import views
+from myApp import views as myapp_view
+from learn import views as learn_view
+
 
 
 urlpatterns = [
-    path('', views.index, name='home'),
+    path('', myapp_view.index, name='home'),
     path('admin/', admin.site.urls),
     #path('myapp/',include('myApp.urls')),
     #path('myapp/',include(urls))
-    path('add/', views.add, name='add'),  # new
-    path('new_add2/<int:a>/<int:b>/', views.add2, name='add2'),
+    path('add/', myapp_view.add, name='add'),  # new
+    path('new_add2/<int:a>/<int:b>/', myapp_view.add2, name='add2'),
+    path('learn',learn_view.home,name='learnHome'),
+    path('base',learn_view.base,name='learnBase'),
 
 ]
