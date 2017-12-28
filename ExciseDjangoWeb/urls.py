@@ -29,5 +29,9 @@ urlpatterns = [
     path('new_add2/<int:a>/<int:b>/', myapp_view.add2, name='add2'),
     path('learn',learn_view.home,name='learnHome'),
     path('base',learn_view.base,name='learnBase'),
+    path('tmup',learn_view.showString,name='showstring'),
+    path('forlist',learn_view.forList,name='forlist'),
+    path('shoedict',learn_view.showDict,name='showdict'),
+    path('iffor',learn_view.ifFor,name='iffor'),
 
 ]
